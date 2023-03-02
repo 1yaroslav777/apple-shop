@@ -1,0 +1,59 @@
+.sort {
+  position: absolute;
+  top: 255px;
+  left: 190px;
+  background-color: #3c3c3c;
+  width: 200px;
+  height: 43px;
+  border-radius: 13px;
+  line-height: 43px;
+  &__label {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 12px;
+      margin-right: 7px;
+    }
+
+    b {
+      margin-right: 8px;
+      color: #bab9b9;
+    }
+
+    span {
+      color: #ffffff;
+      border-bottom: 1px dashed #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: rgba(254, 95, 30, 0.05);
+        }
+
+        &.active {
+          font-weight: bold;
+          color: orange;
+        }
+      }
+    }
+  }
+}

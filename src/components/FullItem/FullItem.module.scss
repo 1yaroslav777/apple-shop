@@ -1,0 +1,40 @@
+.block {
+  width: 80%;
+  margin: 0 auto;
+}
+.img {
+  height: 450px;
+}
+.h2 {
+  position: absolute;
+  top: 161px;
+  left: 700px;
+  font-size: 30pt;
+}
+.h4 {
+  position: absolute;
+  font-size: 20pt;
+  left: 700px;
+  top: 420px;
+}
+.button {
+  position: absolute;
+  top: 480px;
+  left: 700px;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #94bbe9;
+  cursor: pointer;
+  &:hover {
+    background-color: #85a9d2;
+    width: 130px;
+    transition: 0.45s ease-in-out;
+  }
+  span {
+    font-weight: 700;
+    font-size: 13pt;
+    color: aliceblue;
+  }
+}

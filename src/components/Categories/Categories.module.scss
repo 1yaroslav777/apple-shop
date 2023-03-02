@@ -1,0 +1,41 @@
+.categories {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  .mainH {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      background-color: #3c3c3c;
+      color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+
+      &:hover {
+        background-color: darken(#3c3c3c, 2%);
+      }
+
+      &:active {
+        background-color: darken(#3c3c3c, 5%);
+      }
+
+      &.active {
+        background-color: #fff;
+        color: #282828;
+        border: 0.5px solid #282828;
+      }
+    }
+  }
+}
