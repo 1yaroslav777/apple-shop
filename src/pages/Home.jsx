@@ -31,6 +31,7 @@ const Home = () => {
 
   React.useEffect(() => {
     getItems();
+    // eslint-disable-next-line
   }, [categoryId, searchValue, sort.sortProperty]);
 
   const skeletons = [...new Array(10)].map((_, index) => <Skeletons key={index} />);

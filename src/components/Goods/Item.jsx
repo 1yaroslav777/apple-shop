@@ -2,15 +2,13 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { addItem, selectCartItemById } from '../../redux/slices/cartSlice';
-import { favButton, selectFavs } from '../../redux/slices/favoritesSlice';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/slices/cartSlice';
+import { favButton } from '../../redux/slices/favoritesSlice';
 
 const Item = ({ id, title, imageUrl, gigabytes, price, category, rating }) => {
   const [activeGigs, setActiveGigs] = React.useState(0);
   const [favorite, setFavorite] = React.useState(false);
-
-  const cartItem = useSelector(selectCartItemById);
 
   const dispatch = useDispatch();
 

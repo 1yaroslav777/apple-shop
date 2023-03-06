@@ -19,7 +19,7 @@ const FullItem = () => {
       }
     }
     fetchItems();
-  }, []);
+  }, [id]);
 
   if (!items) {
     return <div>Loading</div>;
