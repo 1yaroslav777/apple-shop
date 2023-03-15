@@ -6,8 +6,8 @@ import styles from './Sort.module.scss';
 
 const Sort = ({ value }) => {
   const popapValues = [
-    { name: 'rating(desc)', sortProperty: 'rating' },
-    { name: 'rating(asc)', sortProperty: '-rating' },
+    { name: 'rating', sortProperty: 'rating' },
+
     { name: 'price(desc)', sortProperty: 'price' },
     { name: 'price(asc)', sortProperty: '-price' },
     { name: 'title(desc)', sortProperty: 'title' },
@@ -17,22 +17,24 @@ const Sort = ({ value }) => {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const dispatch = useDispatch();
-  const sortRef = React.useRef(null);
+  const sortRef = React.useRef(true);
 
   const onClickListItem = (obj) => {
     dispatch(setSort(obj));
     setIsVisible(false);
   };
+
   React.useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sortRef.current && !event.path.includes(sortRef.current)) {
+    const handleClick = (event) => {
+      if (sortRef.current && !event.composedPath().includes(sortRef.current)) {
         setIsVisible(false);
       }
     };
 
-    document.body.addEventListener('click', handleClickOutside);
-
-    return () => document.body.removeEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClick);
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
   }, []);
 
   return (

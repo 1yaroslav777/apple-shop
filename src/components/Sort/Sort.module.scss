@@ -1,7 +1,7 @@
 .sort {
-  position: absolute;
-  top: 255px;
-  left: 190px;
+  position: relative;
+  top: 78px;
+
   background-color: rgb(31, 30, 30);
   width: 200px;
   height: 43px;
@@ -46,14 +46,17 @@
 
         &.active,
         &:hover {
-          background: rgba(254, 95, 30, 0.05);
+          background: rgba(117, 101, 94, 0.05);
         }
 
         &.active {
           font-weight: bold;
-          color: orange;
+          color: rgba(103, 95, 80, 0.323);
         }
       }
     }
+  }
+  @media (max-width: 1320px) {
+    display: none;
   }
 }

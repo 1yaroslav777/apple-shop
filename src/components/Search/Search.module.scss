@@ -1,9 +1,16 @@
 .root {
   margin-top: 15px;
 
-  position: absolute;
-  top: 240px;
-  right: 190px;
+  position: relative;
+  top: 64px;
+  @media (max-width: 1098px) {
+    top: 95px;
+  }
+  @media (max-width: 1320px) {
+    top: 95px;
+    display: flex;
+    justify-content: center;
+  }
 }
 .input {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -27,18 +34,18 @@
   width: 24px;
   height: 24px;
   opacity: 0.9;
-  position: absolute;
-  left: 195px;
-  top: 10px;
+  position: relative;
+  left: -32px;
+  top: 5px;
   stroke: rgb(234, 234, 234);
 }
 .closeIcon {
   width: 18px;
   height: 18px;
   opacity: 0.9;
-  position: absolute;
-  right: 15px;
-  top: 13px;
+  position: relative;
+  left: -32px;
+  top: 5px;
   stroke: whitesmoke;
   &:hover {
     opacity: 0.8;

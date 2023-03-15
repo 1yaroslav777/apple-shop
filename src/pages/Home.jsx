@@ -2,7 +2,7 @@ import React from 'react';
 import Item from '../components/Goods/Item';
 import Categories from '../components/Categories/Categories';
 import Skeletons from '../components/Goods/Skeletons';
-//import Slider from '../components/MainBlock/Slider';
+import Error from './Error';
 import Search from '../components/Search/Search';
 import Sort from '../components/Sort/Sort';
 
@@ -26,7 +26,7 @@ const Home = () => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const search = searchValue ? `&search=${searchValue}` : '';
 
-    dispatch(fetchItems({ category, search, sortBy, order }));
+    dispatch(fetchItems({ order, sortBy, category, search }));
   };
 
   React.useEffect(() => {
@@ -39,14 +39,13 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Slider /> */}
-      <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-      <Sort value={sort} />
-      <Search />
+      <div className="top">
+        <Search />
+        <Categories value={categoryId} onChangeCategory={onChangeCategory} />
+        <Sort value={sort} />
+      </div>
       {status === 'error' ? (
-        <div>
-          <h2>UNEXPECTED ERROR</h2>
-        </div>
+        <Error />
       ) : (
         <div className="content__items">{status === 'loading' ? skeletons : item}</div>
       )}
