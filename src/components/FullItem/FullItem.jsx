@@ -22,7 +22,7 @@ const FullItem = () => {
   }, [id]);
 
   if (!items) {
-    return <div>Loading</div>;
+    return <h2 className={styles.h2}>Loading...</h2>;
   }
 
   return (

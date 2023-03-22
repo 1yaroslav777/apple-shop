@@ -4,10 +4,9 @@ import { useDispatch } from 'react-redux';
 import { setSort } from '../../redux/slices/filterSlice';
 import styles from './Sort.module.scss';
 
-const Sort = ({ value }) => {
+const Sort = React.memo(({ value }) => {
   const popapValues = [
     { name: 'rating', sortProperty: 'rating' },
-
     { name: 'price(desc)', sortProperty: 'price' },
     { name: 'price(asc)', sortProperty: '-price' },
     { name: 'title(desc)', sortProperty: 'title' },
@@ -70,6 +69,6 @@ const Sort = ({ value }) => {
       )}
     </div>
   );
-};
+});
 
 export default Sort;

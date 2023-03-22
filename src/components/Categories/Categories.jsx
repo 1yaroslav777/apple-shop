@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Categories.module.scss';
 
-const Categories = ({ value, onChangeCategory }) => {
+const Categories = React.memo(({ value, onChangeCategory }) => {
   const categories = ['All', 'Iphones', 'Macbooks', 'Ipads'];
 
   return (
@@ -20,6 +20,6 @@ const Categories = ({ value, onChangeCategory }) => {
       </ul>
     </div>
   );
-};
+});
 
 export default Categories;

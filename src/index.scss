@@ -763,13 +763,60 @@ body {
       font-size: 30pt;
       font-weight: 580;
     }
+    @media (max-width: 1320px) {
+      scale: 0.8;
+      span {
+        font-size: 35pt;
+      }
+      p {
+        font-size: 20pt;
+      }
+    }
+    @media (max-width: 1000px) {
+      scale: 0.6;
+      span {
+        font-size: 30pt;
+      }
+      p {
+        font-size: 17pt;
+      }
+    }
+    @media (max-width: 840px) {
+      scale: 0.6;
+      width: 70%;
+      span {
+        font-size: 25pt;
+      }
+      p {
+        font-size: 16pt;
+      }
+    }
+    @media (max-width: 790px) {
+      scale: 0.6;
+      width: 70%;
+      span {
+        font-size: 20pt;
+      }
+      p {
+        font-size: 16pt;
+      }
+    }
+    @media (max-width: 610px) {
+      width: 70%;
+      span {
+        font-size: 17pt;
+      }
+      p {
+        font-size: 16pt;
+      }
+    }
   }
   .goBackButton {
     cursor: pointer;
     display: flex;
     justify-content: center;
-    left: 550px;
-    position: absolute;
+
+    position: relative;
     background-color: black;
     width: 230px;
     height: 50px;
